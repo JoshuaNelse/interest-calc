@@ -1,0 +1,44 @@
+<form class="mt-5 border rounded px-5 bg-cultured">
+  <div class="form-row text-black-coral font-weight-bolder my-2">
+    <div class="col">
+      <label for="initial-amount-form">Initial Amount:</label>
+      <input id="initial-amount-form" type="text" class="form-control" placeholder="$ at start"
+             [(ngModel)]="initialAmount" name="initial-amount" required>
+    </div>
+    <div class="col">
+      <label for="monthly-investment-form">Monthly Investment:</label>
+      <input id="monthly-investment-form" type="text" class="form-control" placeholder="$ per month"
+             [(ngModel)]="monthlyAddition" name="monthly-addition" required>
+    </div>
+    <div class="col">
+      <label for="interest-rate-form">Interest Rate:</label>
+      <input id="interest-rate-form" type="text" class="form-control" placeholder="Example: 10 for 10%"
+             [(ngModel)]="interestRate" name="interest-rate" required>
+    </div>
+    <div class="col">
+      <label for="years-form">Years:</label>
+      <input id="years-form" type="text" class="form-control" placeholder="Number of years"
+             [(ngModel)]="numberOfYears" name="number-of-years" required>
+    </div>
+  </div>
+  <button class="btn bg-black-coral text-cultured my-2" style="opacity: .8"
+    (click)="getYearsOfInterest()">Calculate</button>
+</form>
+
+<app-interest-chart-component [yearsOfGrowth]="yearsOfInterest"></app-interest-chart-component>
+
+<div class="row border-bottom mt-5 text-black-coral font-weight-bolder text-right">
+  <div class="col">Year(s)</div>
+  <div class="col">Value</div>
+  <div class="col">Growth</div>
+  <div class="col">Increase</div>
+  <div class="col"></div>
+</div>
+
+<div class="row my-3 text-black-coral border-bottom text-right" *ngFor="let yearOfInterest of yearsOfInterest">
+  <div class="col ">{{yearOfInterest.yearId}}</div>
+  <div class="col ">{{yearOfInterest.value | currency: 'USD': 'symbol':'1.2-2'}}</div>
+  <div class="col ">{{yearOfInterest.growth/100 | percent}}</div>
+  <div class="col text-forest-green">{{yearOfInterest.increase | currency: 'USD': 'symbol':'1.2-2'}}</div>
+  <div class="col"></div>
+</div>

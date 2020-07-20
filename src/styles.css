@@ -1,1 +1,40 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.min.css";
+@import "~font-awesome/css/font-awesome.min.css";
+
+
+/*
+  scheme
+  Cultured (light) F4F7F5
+  Forest Green 74A57F
+  Black Coral (blue/grey) 495867
+ */
+
+.bg-cultured {
+  background: #F4F7F5;
+}
+
+.bg-forest-green {
+  background: #74A57F;
+}
+
+.bg-black-coral {
+  background: #495867;
+}
+
+.text-cultured {
+  color: #F4F7F5;
+}
+
+.text-forest-green {
+  color: #74A57F;
+}
+
+.bg-black-coral.text-cultured:hover{
+  color: #F4F7F5;
+  background: #2A333C;
+}
+
+.text-black-coral {
+  color: #495867;
+}
