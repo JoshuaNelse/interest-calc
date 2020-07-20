@@ -1,0 +1,20 @@
+<div *ngIf="hasData">
+  <div class="mt-3">
+
+    <div class="d-inline btn-outline-secondary border rounded p-1"
+         (click)="toggleShowGraph()">
+      <a class="fa fa-chevron-up up-chevron" style="margin: auto"
+         [class.down-chevron]="!showGraph"></a></div>
+
+    <a class="ml-2">{{chartOptions.title.text}}</a>
+    <div [class.d-none]="!showGraph">
+      <apx-chart
+                 [series]="chartOptions.series"
+                 [chart]="chartOptions"
+                 [yaxis]="chartOptions.yAxis"
+                 [xaxis]="chartOptions.xAxis"></apx-chart>
+    </div>
+  </div>
+</div>
+
+
