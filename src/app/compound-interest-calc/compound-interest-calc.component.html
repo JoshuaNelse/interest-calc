@@ -1,21 +1,21 @@
-<form class="mt-5 border rounded px-5 bg-cultured">
+<form class="mt-sm-2 mt-md-5 border rounded px-5 bg-cultured">
   <div class="form-row text-black-coral font-weight-bolder my-2">
-    <div class="col">
+    <div class="col-sm-12 col-md-6 col-lg-3">
       <label for="initial-amount-form">Initial Amount:</label>
       <input id="initial-amount-form" type="text" class="form-control" placeholder="$ at start"
              [(ngModel)]="initialAmount" name="initial-amount" required>
     </div>
-    <div class="col">
+    <div class="col-sm-12 col-md-6 col-lg-3">
       <label for="monthly-investment-form">Monthly Investment:</label>
       <input id="monthly-investment-form" type="text" class="form-control" placeholder="$ per month"
              [(ngModel)]="monthlyAddition" name="monthly-addition" required>
     </div>
-    <div class="col">
+    <div class="col-sm-12 col-md-6 col-lg-3">
       <label for="interest-rate-form">Interest Rate:</label>
       <input id="interest-rate-form" type="text" class="form-control" placeholder="Example: 10 for 10%"
              [(ngModel)]="interestRate" name="interest-rate" required>
     </div>
-    <div class="col">
+    <div class="col-sm-12 col-md-6 col-lg-3">
       <label for="years-form">Years:</label>
       <input id="years-form" type="text" class="form-control" placeholder="Number of years"
              [(ngModel)]="numberOfYears" name="number-of-years" required>
