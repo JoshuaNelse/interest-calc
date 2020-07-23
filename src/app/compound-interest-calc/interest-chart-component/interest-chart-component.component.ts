@@ -36,7 +36,7 @@ export class InterestChartComponentComponent implements OnInit, OnChanges {
   @Input() yearsOfGrowth: IYear[];
   hasData = false;
   showGraph = true;
-  filterYears = (x) => (this.yearsOfGrowth.length <= 30 ? true : x % Math.ceil(this.yearsOfGrowth.length / 30) === 0);
+  filterYears = (x) => (this.yearsOfGrowth.length <= 20 ? true : x % Math.ceil(this.yearsOfGrowth.length / 20) === 0);
   ngOnChanges(): void {
     this.hasData = this.yearsOfGrowth.length > 0;
     this.chartOptions = {
